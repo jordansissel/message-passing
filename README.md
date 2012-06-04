@@ -19,8 +19,7 @@ between pipeline stations.
 
 ## Summary of data
 
-Go, so far, sets the bar for good performance.
-
+* C + zeromq: 2,900,00 messages per second.
 * Go + chan: 1,500,000 messages per second.
 * JRuby + SizedQueue: 150,000 messages per second.
 * MRI 1.9.3 + SizedQueue: 100,000 messages per second.
@@ -65,6 +64,15 @@ One thread publishing a string to a queue. One thread consuming.
 {:platform=>"jruby-1.7.0.preview1(1.9.3)", "SizedQueue"=>"152035.7588104722 per second"}
 ```
 
-JRuby tests were done with Java `1.7.0_b147-icedtea`
+JRuby tests were done with Java `1.7.0\_b147-icedtea`
 
+## C + ZeroMQ
+
+One thread publishing a string to a PUSHPULL socket. One thread consuming.
+
+One run.
+
+```
+Rate: 2931606.972528 (count: 50000000)
+```
 
