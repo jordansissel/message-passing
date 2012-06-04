@@ -19,10 +19,14 @@ between pipeline stations.
 
 ## Summary of data
 
-* C + zeromq: 2,900,00 messages per second.
+* C + zeromq: 3,500,000 messages per second.
 * Go + chan: 1,500,000 messages per second.
 * JRuby + SizedQueue: 150,000 messages per second.
 * MRI 1.9.3 + SizedQueue: 100,000 messages per second.
+
+## Testing Environment
+
+Intel i7-2640M on a laptop.
 
 ## Go + chan
 
@@ -68,11 +72,13 @@ JRuby tests were done with Java `1.7.0\_b147-icedtea`
 
 ## C + ZeroMQ
 
-One thread publishing a string to a PUSHPULL socket. One thread consuming.
+One thread publishing a string to a PUSHPULL socket. One thread consuming. Using inproc.
 
-One run.
+Run 3 times.
 
 ```
-Rate: 2931606.972528 (count: 50000000)
+Rate: 3648566.501864 (count: 50000000)
+Rate: 3442557.444144 (count: 50000000)
+Rate: 3311507.689501 (count: 50000000)
 ```
 
