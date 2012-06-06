@@ -28,7 +28,7 @@ emitter = Thread.new(context) do |context|
   end
 end
 
-count = 500_000
+count = 5_000_000
 5.times do
   result = ""
   benchmark("zmq::pushpull", count) do 
