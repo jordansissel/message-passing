@@ -28,6 +28,10 @@ between pipeline stations.
 
 Intel i7-2640M on a laptop.
 
+If you run these tests yourself, please note the relative speeds between other 
+runs, not relative to the data presented here. THe data presented here, as stated,
+is only for my laptop as the control case.
+
 ## Go + chan
 
 One goroutine publishing strings to a channel. The main goroutine consuming.
