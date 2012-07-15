@@ -11,7 +11,7 @@ def benchmark(name, iterations, &block)
   iterations.times(&block)
   duration = Time.now - start
   rate = iterations / duration
-  puts :platform => ENVIRONMENT, name => "#{rate} per second"
+  puts ({:platform => ENVIRONMENT, name => "#{rate} per second"}.inspect)
 end # def benchmark
 
 
